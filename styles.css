@@ -1,0 +1,36 @@
+/* ===== Norte — custom styles ===== */
+/* Tailwind (CDN) handles utilities. This file holds only custom CSS. */
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+.eyebrow { letter-spacing: .22em; }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* Photo fallback while real files are missing */
+.ph { background: #23453B; position: relative; }
+.ph::after {
+  content: attr(data-ph);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #E8E2D6;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .5;
+}
+
+img { object-fit: cover; }
