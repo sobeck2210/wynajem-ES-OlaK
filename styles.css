@@ -236,7 +236,7 @@ h3 {
   inset: 0;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/hero-image-mobile.webp); /* Twoje poziome zdjęcie */
+    url(hero-image-mobile.webp); /* Twoje poziome zdjęcie */
   background-size: cover;
   background-position: center; /* Możesz zmienić na 'center top' jeśli ucina górę */
 }
@@ -251,7 +251,7 @@ h3 {
   .hero__overlay {
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(img/hero-image.webp);
+      url(hero-image.webp);
   }
 }
 .hero__content {
