@@ -185,6 +185,24 @@ h3 {
 .lang .sep {
   opacity: 0.4;
 }
+.header.scrolled {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Białe tło z lekką przezroczystością */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień, żeby odciąć od reszty strony */
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Resetujemy mix-blend-mode i zmieniamy kolor tekstu na ciemny ink */
+.header.scrolled .wrap {
+  mix-blend-mode: normal;
+  color: var(--ink);
+}
 @media (min-width: 768px) {
   .nav {
     display: flex;
@@ -204,15 +222,37 @@ h3 {
   inset: 0;
   width: 100%;
 }
+/* Domyślnie dla MOBILE */
+.hero {
+  position: relative;
+  min-height: 600px; /* <-- Zamiast całego ekranu, dajemy zwartą wysokość */
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(to top, rgba(2,62,90,.85), rgba(2,62,90,.15) 55%, rgba(2,62,90,.4)); */
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(hero-image.webp);
-  background-size: cover; /* Warto dodać, aby obrazek ładnie wypełniał przestrzeń */
-  background-position: center;
+    url(img/hero-image-mobile.webp); /* Twoje poziome zdjęcie */
+  background-size: cover;
+  background-position: center; /* Możesz zmienić na 'center top' jeśli ucina górę */
+}
+
+/* Dla DESKTOPA (ekrany od 600px w górę) */
+@media (min-width: 600px) {
+  .hero {
+    min-height: 100svh; /* Na komputerach wraca pełny ekran */
+  }
+  /* Jeśli na desktopie chcesz inne zdjęcie, odkomentuj poniższe: */
+
+  .hero__overlay {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(img/hero-image.webp);
+  }
 }
 .hero__content {
   position: relative;
@@ -241,7 +281,6 @@ h3 {
     gap: 3rem;
   }
 }
-
 /* Intro */
 .intro {
   text-align: center;
