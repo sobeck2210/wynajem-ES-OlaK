@@ -210,7 +210,7 @@ h3 {
   /* background: linear-gradient(to top, rgba(2,62,90,.85), rgba(2,62,90,.15) 55%, rgba(2,62,90,.4)); */
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(img/hero-image.webp);
+    url(hero-image.webp);
   background-size: cover; /* Warto dodać, aby obrazek ładnie wypełniał przestrzeń */
   background-position: center;
 }
