@@ -63,29 +63,36 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <div class="wrap">
-        <a href="#" class="brand">Costa Rental</a>
-        <nav class="nav">
-          <a href="#flota" data-i18n="nav_fleet">Flota</a>
-          <a href="#kierunki" data-i18n="nav_dest">Kierunki</a>
-          <a href="#jak" data-i18n="nav_how">Jak to działa</a>
-          <a href="#warunki" data-i18n="nav_terms">Warunki</a>
-          <a href="#faq" data-i18n="nav_faq">FAQ</a>
-          <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
-        </nav>
+  <!-- Header -->
+  <header class="header" id="siteHeader">
+    <div class="wrap">
+      <a href="#" class="brand">Norte</a>
+ 
+      <nav class="nav" id="primaryNav">
+        <a href="#flota" data-i18n="nav_fleet">Flota</a>
+        <a href="#kierunki" data-i18n="nav_dest">Kierunki</a>
+        <a href="#jak" data-i18n="nav_how">Jak to działa</a>
+        <a href="#warunki" data-i18n="nav_terms">Warunki</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
         <div class="lang" role="group" aria-label="Language">
-          <button data-lang="pl" class="lang-btn" aria-pressed="true">PL</button
-          ><span class="sep">/</span>
-          <button data-lang="en" class="lang-btn" aria-pressed="false">
-            EN</button
-          ><span class="sep">/</span>
-          <button data-lang="es" class="lang-btn" aria-pressed="false">
-            ES
-          </button>
+          <button data-lang="pl" class="lang-btn" aria-pressed="true">PL</button><span class="sep">/</span>
+          <button data-lang="en" class="lang-btn" aria-pressed="false">EN</button><span class="sep">/</span>
+          <button data-lang="es" class="lang-btn" aria-pressed="false">ES</button>
         </div>
+      </nav>
+ 
+      <div class="header__actions">
+        <a href="tel:+34600000000" class="btn-tel">
+          <span class="btn-tel__icon" aria-hidden="true">📞</span>
+          <span class="btn-tel__num">+34 600 000 000</span>
+        </a>
+        <button class="hamburger" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Hero -->
     <section class="hero">
