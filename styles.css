@@ -136,7 +136,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .hero__img { position: absolute; inset: 0; width: 100%; }
 .hero__overlay {
   position: absolute; inset: 0;
-  background: url(hero-image.webp);
+  background: url(hero-image-mobile.webp);
 }
 .hero__content { position: relative; color: var(--sand); padding-block: 4rem; }
 .hero h1 { font-size: clamp(2.75rem, 9vw, 6rem); max-width: 20ch; margin-block: 1.25rem 2rem; }
@@ -144,6 +144,19 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .hero__sub { font-size: 1.125rem; color: rgba(255,246,236,.85); max-width: 30ch; }
 @media (min-width: 640px) {
   .hero__cta { flex-direction: row; align-items: flex-end; gap: 3rem; }
+}
+/* Dla DESKTOPA (ekrany od 600px w górę) */
+@media (min-width: 600px) {
+  .hero {
+    min-height: 100svh; /* Na komputerach wraca pełny ekran */
+  }
+  /* Jeśli na desktopie chcesz inne zdjęcie, odkomentuj poniższe: */
+
+  .hero__overlay {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(hero-image.webp);
+  }
 }
 
 /* Intro */
