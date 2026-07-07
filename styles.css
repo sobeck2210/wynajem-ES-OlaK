@@ -132,7 +132,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 }
 
 /* Hero */
-.hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; }
+/* Domyślnie dla MOBILE */
+.hero {
+  position: relative;
+  min-height: 600px; /* <-- Zamiast całego ekranu, dajemy zwartą wysokość */
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
 .hero__img { position: absolute; inset: 0; width: 100%; }
 .hero__overlay {
   position: absolute; inset: 0;
